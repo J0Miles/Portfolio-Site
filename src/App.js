@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import logo from "./MJ.png";
 
 class App extends React.Component {
   constructor(props) {
@@ -37,17 +38,18 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid>
           <Navbar className="border-bottom">
-            <Navbar.Brand>Jordan Miles</Navbar.Brand>
+            <img className="logo" src={logo} />
+            <Navbar.Brand id="header-text">Jordan Miles</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" id="header-text" to="/">
                   Home
                 </Link>
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" id="header-text" to="/about">
                   About
                 </Link>
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" id="header-text" to="/contact">
                   Contact
                 </Link>
               </Nav>
