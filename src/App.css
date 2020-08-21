@@ -8,11 +8,11 @@
 }
 
 .logo {
-  width: 3%;
-  padding-right: 20px;
+  height: 40px;
+  padding-right: 12px;
 }
 
-.p-0 {
+#nav {
   background: black;
   opacity: 85%;
 }
