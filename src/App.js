@@ -50,7 +50,6 @@ class App extends React.Component {
         isHalfway: true
       });
     }
-    console.log(halfway, e.target.scrollTop);
   };
 
   render() {

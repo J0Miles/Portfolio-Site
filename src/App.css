@@ -14,17 +14,16 @@
 
 .largeLogo {
   width: 100%;
-  opacity: 70%;
-  height: 950px;
 }
 
 .content {
-  height: 85vh;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .gradient {
   background: linear-gradient(342deg, #ceb55f 0%, #000000 50%);
-  height: 950px;
+  width: 100%;
 }
 
 #nav {

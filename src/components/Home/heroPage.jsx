@@ -1,5 +1,5 @@
 import React from "react";
-import largeLogo from "./MJ.jpg";
+import largeLogo from "./MJ-T.png";
 
 function HeroPage() {
   return (
