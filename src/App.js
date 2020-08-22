@@ -1,21 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import "./App.css";
-import Home from "./components/Home/homepage";
-import About from "./components/About/aboutpage";
-import Contact from "./components/Contact/contactpage";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import logo from "./MJ.png";
 
+import "./App.css";
+import logo from "./MJ.png";
 import Footer from "./components/footer";
+import Home from "./components/Home/homepage";
+import About from "./components/About/aboutpage";
+import Contact from "./components/Contact/contactpage";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "Jordan Miles",
+      showNavLogo: false,
+      isHalfway: false,
       headerLinks: [
         { title: "Home", path: "/" },
         { title: "About", path: "/about" },
@@ -37,11 +39,25 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = e => {
+    const halfway = window.scrollY > window.innerHeight / 2;
+    if (halfway) {
+      this.setState({
+        isHalfway: true
+      });
+    }
+    console.log(halfway, e.target.scrollTop);
+  };
+
   render() {
     return (
       <Router>
         <Container className="p-0" fluid>
-          <Navbar className="border-bottom" id="nav">
+          <Navbar className="border-bottom" id="nav" sticky="top">
             <img className="logo" src={logo} />
             <Navbar.Brand id="header-text">Jordan Miles</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-toggle" />
@@ -67,6 +83,8 @@ class App extends React.Component {
                 title={this.state.home.title}
                 subTitle={this.state.home.subTitle}
                 body={this.state.home.body}
+                isHalfway={this.state.isHalfway}
+                onScroll={this.handleScroll}
               />
             )}
           />

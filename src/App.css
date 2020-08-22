@@ -12,9 +12,26 @@
   padding-right: 12px;
 }
 
+.largeLogo {
+  width: 100%;
+  opacity: 70%;
+  height: 950px;
+}
+
+.content {
+  height: 85vh;
+}
+
+.gradient {
+  background: linear-gradient(342deg, #ceb55f 0%, #000000 50%);
+  height: 950px;
+}
+
 #nav {
   background: black;
   opacity: 85%;
+  position: sticky;
+  width: 100%;
 }
 
 #header-text {
