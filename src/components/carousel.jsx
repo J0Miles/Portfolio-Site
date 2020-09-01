@@ -16,7 +16,7 @@ class Carousel extends React.Component {
         {
           id: 0,
           title: "Jordan's Gym Locker",
-          subTitle: "My personal blog site",
+          subTitle: "Affiliate blog site using WordPress",
           imgSrc: blogsite,
           link: "http://jordansgymlocker.com",
           selected: false
@@ -24,7 +24,7 @@ class Carousel extends React.Component {
         {
           id: 1,
           title: "LinkedIn",
-          subTitle: "My LinkedIn",
+          subTitle: "My LinkedIn Profile",
           imgSrc: linkedin,
           link: "https://www.linkedin.com/in/jordan-miles-675b20139/",
           selected: false
@@ -32,7 +32,7 @@ class Carousel extends React.Component {
         {
           id: 2,
           title: "Github",
-          subTitle: "My Github profile",
+          subTitle: "Github profile",
           imgSrc: github,
           link: "https://github.com/J0Miles",
           selected: false

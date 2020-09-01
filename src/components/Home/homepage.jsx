@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 import HeroPage from "./heroPage";
 import Carousel from "../carousel";
-import Logo from "../logo"
+import Logo from "../logo";
 
 function Home(props) {
   React.useEffect(() => {
@@ -14,15 +14,15 @@ function Home(props) {
   return (
     <React.Fragment>
       <Logo />
-    <div data-aos="fade-right">
-      <HeroPage
-        title={props.title}
-        subTitle={props.subTitle}
-        text={props.text}
-      />
+      <div data-aos="fade-left">
+        <HeroPage
+          title={props.title}
+          subTitle={props.subTitle}
+          text={props.text}
+        />
         <Carousel />
-        </div>
-        </React.Fragment>
+      </div>
+    </React.Fragment>
   );
 }
 export default Home;
