@@ -6,7 +6,7 @@ import Card from "./card";
 
 import blogsite from "../assets/images/blogsite.jpg";
 import linkedin from "../assets/images/linkedin.jpg";
-import github from "../assets/images/github.jpg";
+import github from "../assets/images/alt_github.jpg";
 
 class Carousel extends React.Component {
   constructor(props) {
