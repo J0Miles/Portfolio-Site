@@ -26,6 +26,12 @@
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .gradient {
+    display: none;
+  }
+}
+
 #nav {
   background: black;
   opacity: 90%;
