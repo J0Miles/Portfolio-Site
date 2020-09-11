@@ -56,21 +56,46 @@ class App extends React.Component {
     return (
       <Router>
         <Container className="p-0" fluid>
-          <Navbar className="border-bottom" id="nav" sticky="top">
+          <Navbar
+            collapseOnSelect
+            className="border-bottom"
+            id="nav"
+            sticky="top"
+            variant="dark"
+            expand="md"
+          >
             <img className="logo" src={logo} />
             <Navbar.Brand id="header-text">Jordan Miles</Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" id="header-text" to="/">
+                <Nav.Link
+                  eventKey="0"
+                  className="nav-link"
+                  id="header-text"
+                  as={Link}
+                  to="/"
+                >
                   Home
-                </Link>
-                <Link className="nav-link" id="header-text" to="/about">
+                </Nav.Link>
+                <Nav.Link
+                  eventKey="1"
+                  className="nav-link"
+                  id="header-text"
+                  as={Link}
+                  to="/about"
+                >
                   About
-                </Link>
-                <Link className="nav-link" id="header-text" to="/contact">
+                </Nav.Link>
+                <Nav.Link
+                  eventKey="2"
+                  className="nav-link"
+                  id="header-text"
+                  as={Link}
+                  to="/contact"
+                >
                   Contact
-                </Link>
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
