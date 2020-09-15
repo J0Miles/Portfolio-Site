@@ -10,6 +10,7 @@
 
 # production
 /build
+Portfolio-Site.pub
 
 # misc
 .DS_Store
