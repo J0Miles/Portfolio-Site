@@ -40,12 +40,11 @@
 }
 
 #nav {
-  background: black;
-  opacity: 90%;
+  background: black !important;
 }
 
 #header-text {
-  color: white;
+  color: white !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
