@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 
 import Hero from "../Home/heroPage";
 import Content from "../content";
+import { modifiedFromAddress } from "../../helpers";
 import Axios from "axios";
 
 class ContactPage extends React.Component {
@@ -12,6 +13,7 @@ class ContactPage extends React.Component {
     this.state = {
       name: "",
       email: "",
+      from: "",
       message: "",
       disabled: false,
       emailSent: null
@@ -30,6 +32,13 @@ class ContactPage extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    let splicedFrom = modifiedFromAddress(this.state.email, this.state.from);
+    this.state.from = splicedFrom + "@jordanmiles.dev";
+    // let modifiedFromAddress = this.state.email.substr(
+    // 0,
+    // this.email.indexOf("@")
+    // );
+    //  this.state.from = modifiedFromAddress + "@jordanmiles.dev";
 
     this.setState({
       disabled: true
