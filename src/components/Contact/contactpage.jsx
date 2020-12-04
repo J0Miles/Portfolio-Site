@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Spinner from "react-bootstrap/Spinner";
 
 import Hero from "../Home/heroPage";
 import Content from "../content";
@@ -16,7 +17,8 @@ class ContactPage extends React.Component {
       from: "",
       message: "",
       disabled: false,
-      emailSent: null
+      emailSent: null,
+      loading: false
     };
   }
 
@@ -34,14 +36,10 @@ class ContactPage extends React.Component {
     event.preventDefault();
     let splicedFrom = modifiedFromAddress(this.state.email, this.state.from);
     this.state.from = splicedFrom + "@jordanmiles.dev";
-    // let modifiedFromAddress = this.state.email.substr(
-    // 0,
-    // this.email.indexOf("@")
-    // );
-    //  this.state.from = modifiedFromAddress + "@jordanmiles.dev";
 
     this.setState({
-      disabled: true
+      disabled: true,
+      loading: true
     });
 
     Axios.post("https://jordanmiles.dev/api/email", this.state)
@@ -49,7 +47,8 @@ class ContactPage extends React.Component {
         if (res.data.success) {
           this.setState({
             disabled: false,
-            emailSent: true
+            emailSent: true,
+            loading: false
           });
         } else {
           this.setState({
@@ -63,7 +62,8 @@ class ContactPage extends React.Component {
 
         this.setState({
           disabled: false,
-          emailSent: false
+          emailSent: false,
+          loading: false
         });
       });
   };
@@ -115,6 +115,14 @@ class ContactPage extends React.Component {
               type="submit"
               disabled={this.state.disabled}
             >
+              {this.state.loading == true && (
+                <Spinner
+                  animation="border"
+                  role="status"
+                  size="sm"
+                  id="loader"
+                />
+              )}
               Send
             </Button>
 

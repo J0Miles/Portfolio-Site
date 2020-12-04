@@ -47,6 +47,14 @@
   color: white !important;
 }
 
+#body {
+  font-size: 1.1rem;
+}
+
+#loader {
+  margin: 2px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

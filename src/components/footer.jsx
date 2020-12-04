@@ -7,7 +7,7 @@ function Footer() {
     <footer className="mt-5">
       <Container fluid>
         <Row className="border-top justify-content-center p-2">
-          <div className="">This site was made by Jordan Miles</div>
+          <div className="">Copyright © Jordan Miles</div>
         </Row>
       </Container>
     </footer>
