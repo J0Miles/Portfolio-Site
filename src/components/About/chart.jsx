@@ -29,7 +29,7 @@ class BarChart extends React.Component {
         ],
         datasets: [
           {
-            label: "Proficiency in languages I know",
+            label: "Proficiency of languages I know in (%)",
             data: [
               100,
               100,

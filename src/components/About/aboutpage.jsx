@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../Home/heroPage";
 import Content from "../content";
+import BarChart from "./chart.jsx";
 
 function About(props) {
   return (
@@ -30,6 +31,7 @@ function About(props) {
           </a>
           .
         </p>
+        <BarChart />
       </Content>
     </div>
   );

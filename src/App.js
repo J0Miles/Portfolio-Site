@@ -31,7 +31,8 @@ class App extends React.Component {
       about: {
         title: "About Me",
         subTitle: "",
-        body: ""
+        body: "",
+        data: {}
       },
       contact: {
         title: "Contact Me"
