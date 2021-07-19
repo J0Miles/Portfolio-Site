@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "chartjs";
-import { Bar } from "react-chartjs-2";
+import {Bar} from "react-chartjs-2";
 
 class BarChart extends React.Component {
   constructor(props) {
@@ -24,36 +24,21 @@ class BarChart extends React.Component {
           "MongoDB",
           "Python",
           "GoLang",
+          "Java",
           "PHP",
-          "C++"
+          "C++",
         ],
         datasets: [
           {
-            label: "Proficiency of languages I know in (%)",
+            label: "Proficiency of languages in (%)",
             data: [
-              100,
-              100,
-              100,
-              100,
-              90,
-              80,
-              80,
-              85,
-              80,
-              82,
-              73,
-              80,
-              72,
-              75,
-              69,
-              50,
-              30,
-              20
+              100, 100, 100, 100, 90, 80, 80, 85, 80, 82, 73, 80, 72, 75, 69,
+              50, 55, 30, 20,
             ],
-            backgroundColor: "#ceb55f"
-          }
-        ]
-      }
+            backgroundColor: "#ceb55f",
+          },
+        ],
+      },
     };
   }
 
@@ -70,21 +55,21 @@ class BarChart extends React.Component {
               xAxes: [
                 {
                   ticks: {
-                    scaleLabel: { fontSize: 15 },
+                    scaleLabel: {fontSize: 15},
                     fontFamily:
                       "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,sans-serif",
-                    fontColor: "black"
-                  }
-                }
+                    fontColor: "black",
+                  },
+                },
               ],
               yAxes: [
                 {
                   ticks: {
-                    beginAtZero: true
-                  }
-                }
-              ]
-            }
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
           }}
         />
       </div>

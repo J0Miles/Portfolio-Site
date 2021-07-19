@@ -9,29 +9,44 @@ function About(props) {
       <Hero title={props.title} />
       <Content>
         <p id="body">
-          Hello my name is Jordan Miles. I'm a full stack engineer with
-          experience with React, Angular, Express JS, Node.js, SQL, MySQL,
-          MongoDB, and Python.
+          Hello, my name is Jordan Miles, a Full-Stack Developer with experience
+          in an extensive range of programming languages.
         </p>
         <p id="body">
-          My dream is to do freelance development as an entrepreneur.
+          Over the last few years, I’ve spent my time learning and keeping up
+          with innovative trends in the world of tech. I have a huge interest in
+          how technology can solve real-world problems and bring about progress.
+          This is evident in my diligent pursuit of knowledge and expertise.
         </p>
         <p id="body">
-          I am always trying to learn new things, currently those things include
-          deep learning utilizing Python, WordPress, Azure, and Vue js.
+          At the moment, I am exploring the field of deep learning utilizing
+          Python, e-commerce with WordPress, cloud computing with Azure, and
+          different Javacript frameworks with Vue JS. It is vital to add that
+          what I do does not stop at acquiring skills. I am passionate about
+          using my technical ability to provide professional full-stack
+          development services to business owners and organizations.
         </p>
         <p id="body">
-          I have worked as both a full stack and front end developer in diverse
-          work enviroments. I enjoy building responsive UI's and redefining the
-          User Experience. When I'm not working chances are I am working on a
-          side project. You can find those on my github profile from the
-          homepage or&nbsp;
+          I have experience in diverse work environments, working as a
+          full-stack and front-end developer. I find building responsive UIs and
+          refining the User Experience interesting. It is often the case that I
+          am working on a side project when I am not pouring time and effort
+          into completing a gig.
+        </p>
+        <p id="body">Listed below are some of the areas I have experience in: </p>
+        <BarChart />
+        <br />
+        <p id="body">
+          If you are looking to hire a professional and goal-driven full-stack
+          developer to build your business website or software, I’m your person.
+          I will work with you to bring your vision to life. Would you like to
+          see some of the projects I’ve completed? You can find those on my
+          GitHub profile&nbsp;
           <a href="https://github.com/J0Miles" rel="noopener noreferrer">
             here
           </a>
           .
         </p>
-        <BarChart />
       </Content>
     </div>
   );
